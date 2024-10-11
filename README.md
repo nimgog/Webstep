@@ -4,12 +4,17 @@
 This project is a task board application built using React, where users can create boards, columns, and cards, and use drag-and-drop functionality to manage tasks between columns.
 
 ## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Features](#features)
-- [Available Scripts](#available-scripts)
-- [Learn More](#learn-more)
+- [Project: React Task Board Application](#project-react-task-board-application)
+  - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+  - [Features](#features)
+  - [Available Scripts](#available-scripts)
+    - [`npm i, if you haven't already.`](#npm-i-if-you-havent-already)
+    - [`npm start`](#npm-start)
+    - [`npm run build`](#npm-run-build)
+  - [Learn More](#learn-more)
 
 ## Prerequisites
 
@@ -29,12 +34,12 @@ Before running this project, ensure you have the following installed on your loc
 
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/nimgog/Webstep.git
    ```
 
 2. **Navigate into the project directory**:
    ```bash
-   cd your-repo-name
+   cd Webstep
    ```
 
 3. **Install the dependencies**:
@@ -71,17 +76,15 @@ Once the dependencies are installed, you can start the app locally:
 
 In the project directory, you can run the following commands:
 
+### `npm i, if you haven't already.`
+Install dependencies required to run this application.
+
 ### `npm start`
 Runs the app in development mode and opens [http://localhost:3000](http://localhost:3000) in the browser.The app will reload automatically if you make edits.
 
 ### `npm run build`
 Builds the app for production into the `build` folder.It bundles React in production mode, optimizing the build for best performance.
 
-### `npm test`
-Launches the test runner in interactive watch mode. This is useful for running tests as you develop.
-
-### `npm run eject`
-Ejects the app from the default Create React App configuration, allowing full control over the configuration files.
 
 ## Learn More
 
