@@ -1,0 +1,37 @@
+.boardpage__board {
+    max-height: 800px; 
+    max-width: 95vw; 
+    overflow: auto; 
+    white-space: nowrap; 
+    position: relative; 
+  }
+  
+  
+  .boardpage__board::-webkit-scrollbar {
+    height: 12px; 
+  }
+  
+  .boardpage__board::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  .boardpage__board::-webkit-scrollbar-thumb {
+    background-color: #a8dadc; 
+    border-radius: 6px; 
+    border: 2px solid transparent; 
+  }
+  
+  
+  .boardpage__board::-webkit-scrollbar:vertical {
+    display: none; 
+  }
+  
+  .boardpage__board {
+    scrollbar-width: thin; 
+    scrollbar-color: #a8dadc transparent; 
+  }
+  
+  
+  .boardpage__board {
+    overflow-y: hidden; 
+  }

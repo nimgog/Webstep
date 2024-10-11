@@ -1,0 +1,11 @@
+.column__card {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.breakword {
+  white-space: normal; 
+  word-wrap: break-word; 
+  word-break: break-all; 
+  overflow-wrap: break-word; 
+}
