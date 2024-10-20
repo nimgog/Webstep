@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { useState } from "react";
 import { BoardData, CardData, ColumnData } from "./types/types.model";
 import BoardPage from "./components/boardPage/BoardPage";
 import Dashboard from "./components/dashboard/Dashboard";
@@ -234,6 +233,41 @@ function App() {
     });
   };
 
+  const setCardTitle = (
+    boardId: number,
+    columnId: string,
+    cardId: string,
+    title: string
+  ) => {
+    setBoards(prevBoards => {
+      const updatedBoards = prevBoards.map(board => {
+        if (board.boardId !== boardId) return board;
+    
+        const updatedColumn = {
+          ...board.columns[columnId],
+          cards: {
+            ...board.columns[columnId].cards,
+            [cardId]: {
+              ...board.columns[columnId].cards[cardId],
+              cardTitle: title,
+            },
+          },
+        };
+    
+        return {
+          ...board,
+          columns: {
+            ...board.columns,
+            [columnId]: updatedColumn,
+          },
+        };
+      });
+    
+      console.log("Updated Boards State: ", updatedBoards); 
+      return updatedBoards;
+    });
+  };
+
   return (
     <DndProvider backend={HTML5Backend}>
       <Router>
@@ -263,6 +297,7 @@ function App() {
                   updateCardDescription={updateCardDescription}
                   addCardToColumn={addCardToColumn}
                   removeCardFromColumn={removeCardFromColumn}
+                  setCardTitle={setCardTitle}
                 />
               }
             />

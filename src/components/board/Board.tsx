@@ -17,7 +17,8 @@ const Board: React.FC<BoardProps> = ({
   changeColumnTitle,
   addCardToColumn,
   removeCardFromColumn,
-  updateCardDescription
+  updateCardDescription,
+  setCardTitle,
 }) => {
   const { moveCard } = useDragDropContext();
 
@@ -88,11 +89,14 @@ const Board: React.FC<BoardProps> = ({
             removeCard={(cardId) =>
               removeCardFromColumn(boardId, columnId, cardId)
             }
+            changeColumnTitle={(newTitle: string) =>
+              changeColumnTitle(boardId, columnId, newTitle)
+            }
             updateCardDescription={(cardId: string, newDescription: string) =>
               updateCardDescription(boardId, columnId, cardId, newDescription)
             }
-            changeColumnTitle={(newTitle: string) =>
-              changeColumnTitle(boardId, columnId, newTitle) 
+            setCardTitle={(cardId: string, title: string) =>
+              setCardTitle(boardId, columnId, cardId, title)
             }
           />
         ))}

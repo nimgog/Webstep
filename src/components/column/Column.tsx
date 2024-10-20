@@ -16,6 +16,7 @@ const Column: React.FC<ColumnProps> = ({
   removeCard,
   changeColumnTitle,
   updateCardDescription,
+  setCardTitle,
 }) => {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: "CARD",
@@ -77,6 +78,7 @@ const Column: React.FC<ColumnProps> = ({
             columnId={columnId}
             removeCard={() => removeCard(card.cardId)}
             updateCardDescription={updateCardDescription}
+            setCardTitle={setCardTitle}
           />
         ))}
       </div>

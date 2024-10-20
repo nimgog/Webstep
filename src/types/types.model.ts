@@ -28,6 +28,12 @@ export interface BoardPageProps {
     cardId: string,
     newDescription: string
   ) => void;
+  setCardTitle: (
+    boardId: number,
+    columnId: string,
+    cardId: string,
+    title: string
+  ) => void;
 }
 
 export interface BoardProps {
@@ -55,6 +61,12 @@ export interface BoardProps {
     cardId: string,
     newDescription: string
   ) => void;
+  setCardTitle: (
+    boardId: number,
+    columnId: string,
+    cardId: string,
+    title: string
+  ) => void;
 }
 
 export interface ColumnProps {
@@ -70,6 +82,10 @@ export interface ColumnProps {
   ) => void;
   addCard: () => void;
   removeCard: (cardId: string) => void;
+  setCardTitle: (
+    cardId: string,
+    title: string
+  ) => void;
   updateCardDescription: (
     cardId: string,
     newDescription: string
@@ -82,6 +98,7 @@ export interface CardProps {
   cardDescription?: string;
   columnId: string;
   removeCard: (cardId: string) => void;
+  setCardTitle: (cardId: string, title: string) => void;
   updateCardDescription: (cardId: string, newDescription: string) => void; 
 }
 
