@@ -13,7 +13,8 @@ const BoardPage: React.FC<BoardPageProps> = ({
   changeColumnTitle,
   addCardToColumn,
   removeCardFromColumn,
-  updateCardDescription
+  updateCardDescription,
+  setCardTitle
 }) => {
   const { boardId } = useParams<{ boardId: string }>();
   const board = boards.find((b) => b.boardId === parseInt(boardId as string));
@@ -64,7 +65,8 @@ const BoardPage: React.FC<BoardPageProps> = ({
         changeColumnTitle={changeColumnTitle}
         updateCardDescription={updateCardDescription}
         addCardToColumn={addCardToColumn} 
-        removeCardFromColumn={removeCardFromColumn} 
+        removeCardFromColumn={removeCardFromColumn}
+        setCardTitle={setCardTitle}
       />
     </div>
   );
